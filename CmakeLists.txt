@@ -15,8 +15,9 @@ else()
 endif()
 
 find_package(CEF REQUIRED)
+find_package(Lua51 REQUIRED)
 
 include_directories(${CEF_INCLUDE_DIRS})
 
 add_executable(appteros main.cc)
-target_link_libraries(appteros ${CEF_LIBRARIES})
+target_link_libraries(appteros ${CEF_LIBRARIES} ${LUA_LIBRARIES})
