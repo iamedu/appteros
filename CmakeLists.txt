@@ -1,0 +1,4 @@
+cmake_minimum_required (VERSION 2.8)
+project (Appteros)
+add_executable(appteros main.mm)
+
