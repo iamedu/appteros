@@ -16,7 +16,6 @@ endif()
 
 find_package(CEF REQUIRED)
 find_package(Lua51 REQUIRED)
-
 find_library(COCOA_LIBRARY Cocoa)
 
 include_directories(${CEF_INCLUDE_DIRS})
