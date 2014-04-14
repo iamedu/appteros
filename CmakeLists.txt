@@ -18,7 +18,7 @@ find_package(CEF REQUIRED)
 find_package(Lua51 REQUIRED)
 find_library(COCOA_LIBRARY Cocoa)
 
-include_directories(${CEF_INCLUDE_DIRS})
+include_directories(${CEF_INCLUDE_DIRS} include)
 
-add_executable(appteros main.mm)
+add_executable(appteros main.mm app.mm)
 target_link_libraries(appteros ${CEF_LIBRARIES} ${LUA_LIBRARIES} ${COCOA_LIBRARY})
