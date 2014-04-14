@@ -78,6 +78,7 @@ void AppterosHandler::CloseAllBrowsers(bool force_close) {
     CefPostTask(TID_UI,
         NewCefRunnableMethod(this, &AppterosHandler::CloseAllBrowsers,
                              force_close));
+
     return;
   }
 
@@ -87,5 +88,7 @@ void AppterosHandler::CloseAllBrowsers(bool force_close) {
   BrowserList::const_iterator it = browser_list_.begin();
   for (; it != browser_list_.end(); ++it)
     (*it)->GetHost()->CloseBrowser(force_close);
+
+  exit(0);
 }
 

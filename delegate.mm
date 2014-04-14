@@ -18,9 +18,12 @@
 // Called when the application's Quit menu item is selected.
 - (NSApplicationTerminateReply)applicationShouldTerminate:
       (NSApplication *)sender {
+  NSLog(@"Some code here");
   // Request that all browser windows close.
-  if (AppterosHandler* handler = AppterosHandler::GetInstance())
+  if (AppterosHandler* handler = AppterosHandler::GetInstance()) 
     handler->CloseAllBrowsers(false);
+  else 
+    NSLog(@"Some code there");
 
   // Cancel the termination. The application will exit after all windows have
   // closed.

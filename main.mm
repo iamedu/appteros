@@ -38,14 +38,18 @@ int main(int argc, char *argv[]) {
     NSObject* delegate = [[AppterosDelegate alloc] init];
     [delegate performSelectorOnMainThread:@selector(createApp:) withObject:nil
                             waitUntilDone:NO];
+    NSLog(@"Hola mundo");
 
     CefRunMessageLoop();
+
+    NSLog(@"Hola mundo 1");
 
     CefShutdown();
 
     [delegate release];
     [autopool release];
 
+    NSLog(@"Hola mundo 9");
 
     return 0;
 }
