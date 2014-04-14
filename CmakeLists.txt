@@ -22,3 +22,6 @@ include_directories(${CEF_INCLUDE_DIRS} include)
 
 add_executable(appteros main.mm app.cc handler.cc handler_mac.mm delegate.mm)
 target_link_libraries(appteros ${CEF_LIBRARIES} ${LUA_LIBRARIES} ${COCOA_LIBRARY})
+
+add_executable("appteros Helper" helper.cc)
+target_link_libraries("appteros Helper" ${CEF_LIBRARIES})
