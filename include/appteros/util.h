@@ -1,5 +1,6 @@
 #pragma once
 
+#include "include/cef_task.h"
 #include <assert.h>  // NOLINT(build/include_order)
 
 #ifndef NDEBUG
